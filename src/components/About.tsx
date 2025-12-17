@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import { Media } from "./Media";
+import { tiltZoomIn } from "../utils/motion";
 
 interface AboutProps {
   image: string;
@@ -146,49 +147,16 @@ export function About({ image }: AboutProps) {
 
           {/* Image */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            variants={tiltZoomIn(0.4, 1.6)}
+            initial="hidden"
+            animate={inView ? "show" : "hidden"}
             className="relative lg:pr-10"
+            style={{ perspective: 1200 }}
           >
-            <div className="relative overflow-hidden">
-              {/* <motion.div
-                initial={{ scale: 1.05 }}
-                animate={inView ? { scale: 0.92 } : {}}
-                transition={{
-                  duration: 1.5,
-                  delay: 0.5,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="aspect-[4/5]"
-              >
-                <Media src={image} className="w-full h-full object-cover" />
-              </motion.div> */}
-              <motion.div
-                initial={{
-                  scale: 1.05,
-                  rotateX: 8,
-                  opacity: 0,
-                }}
-                animate={
-                  inView
-                    ? {
-                        scale: 0.92,
-                        rotateX: 0,
-                        opacity: 1,
-                      }
-                    : {}
-                }
-                transition={{
-                  duration: 1.6,
-                  delay: 0.5,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                style={{ perspective: 1200 }}
-                className="aspect-[4/5]"
-              >
-                <Media src={image} className="w-full h-full object-cover" />
-              </motion.div>
+            <div className="relative overflow-hidden aspect-[4/5]">
+              {/* Image */}
+              <Media src={image} className="w-full h-full object-fill" />
+
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-tr from-[#C9A24D]/20 via-transparent to-transparent" />
               {/* Border Frame */}
