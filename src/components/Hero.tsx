@@ -35,17 +35,43 @@ export function Hero({ backgroundVideo }: HeroProps) {
   }, []);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+        <section
+          style={{
+            position: 'relative',
+            width: '100vw',
+            height: '100vh',
+            overflow: 'hidden',
+          }}
+        >
       {/* Background Video with Parallax */}
-      <div
-        ref={videoRef}
-        className="absolute inset-0 transition-transform duration-100 ease-out"
-      >
-        <Media
-          src={backgroundVideo}
-          className="w-full h-full object-contain"
-        />
-      </div>
+          <div
+      ref={videoRef}
+      style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh',
+        overflow: 'hidden',
+        zIndex: 0,
+      }}
+    >
+      <Media
+        src={backgroundVideo}
+        style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          width: '100%',
+          height: '100%',
+          minWidth: '100%',
+          minHeight: '100%',
+          transform: 'translate(-50%, -50%)',
+          objectFit: 'cover',
+        }}
+      />
+    </div>
+
 
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-[#0B0B0B]" />
