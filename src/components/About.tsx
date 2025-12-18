@@ -77,7 +77,7 @@ export function About({ image }: AboutProps) {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="mb-6"
             >
-              <span className="text-[#C9A24D] text-sm tracking-[0.3em] uppercase">
+              <span className="text-[#C9A24D] text-xl tracking-[0.3em] uppercase">
                 Who We Are
               </span>
             </motion.div>

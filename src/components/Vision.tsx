@@ -63,7 +63,7 @@ export function Vision() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-8"
           >
-            <span className="text-[#C9A24D] text-sm tracking-[0.3em] uppercase">Our Vision</span>
+            <span className="text-[#C9A24D] text-xl tracking-[0.3em] uppercase">Our Vision</span>
           </motion.div>
 
           <motion.h2

@@ -151,10 +151,11 @@ const SplitText: React.FC<SplitTextProps> = ({
   const renderTag = () => {
     const style: React.CSSProperties = {
       textAlign,
-      wordWrap: 'break-word',
+      whiteSpace: 'normal',
+      wordBreak: 'keep-all',
       willChange: 'transform, opacity'
     };
-    const classes = `split-parent overflow-hidden inline-block whitespace-normal ${className}`;
+    const classes = `split-parent overflow-hidden inline-flex flex-wrap justify-center ${className}`;
     switch (tag) {
       case 'h1':
         return (

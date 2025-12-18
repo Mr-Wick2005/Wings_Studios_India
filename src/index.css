@@ -66,6 +66,10 @@
     }
   }
 }
+.split-word {
+  display: inline-block;
+  white-space: nowrap;
+}
 
 @layer theme {
   :root, :host {

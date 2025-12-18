@@ -122,7 +122,7 @@ export function AIFeature({ image }: AIFeatureProps) {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="mb-6"
             >
-              <span className="text-[#C9A24D] text-sm tracking-[0.3em] uppercase">The Future of Production</span>
+              <span className="text-[#C9A24D] text-xl tracking-[0.3em] uppercase">The Future of Production</span>
             </motion.div>
 
             <motion.h2

@@ -45,7 +45,7 @@ export function Services({ services }: ServicesProps) {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
-          <span className="text-[#C9A24D] text-sm tracking-[0.3em] uppercase mb-4 block">Our Services</span>
+          <span className="text-[#C9A24D] text-xl tracking-[0.3em] uppercase mb-4 block">Our Services</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-['Playfair_Display'] text-white">
             End-to-End Production
           </h2>
@@ -84,11 +84,18 @@ export function Services({ services }: ServicesProps) {
               {/* Overlay */}
               <motion.div
                 animate={{
-                  opacity: hoveredIndex === index ? 0.85 : 0.75,
+                  opacity: hoveredIndex === index ? 0.95 : 0.85,
                 }}
-                transition={{ duration: 0.5 }}
-                className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B] via-[#0B0B0B]/95 to-[#0B0B0B]/60"
+                transition={{ duration: 0.4 }}
+                className="
+                  absolute inset-0
+                  bg-gradient-to-t
+                  from-[#0B0B0B]/95
+                  via-[#0B0B0B]/70
+                  to-[#0B0B0B]/20
+                "
               />
+
 
               {/* Content */}
               <div className="relative h-full flex flex-col justify-end p-8 lg:p-10">
@@ -104,25 +111,52 @@ export function Services({ services }: ServicesProps) {
 
                 {/* Description - Always visible on hover */}
                 <motion.div
-                  animate={{
-                    opacity: hoveredIndex === index ? 1 : 0,
-                    y: hoveredIndex === index ? 0 : 20,
-                  }}
-                  transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                  className="space-y-4"
-                >
-                  <p className="text-white text-base leading-relaxed font-medium">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2 pt-2">
-                    {service.features.map((feature, i) => (
-                      <li key={i} className="text-[#F5F5F5] text-sm flex items-center gap-3 font-normal">
-                        <span className="w-1.5 h-1.5 bg-[#C9A24D] flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
+  animate={{
+    opacity: hoveredIndex === index ? 1 : 0,
+    y: hoveredIndex === index ? 0 : 20,
+  }}
+  transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+  className="
+    space-y-4
+    bg-black/40
+    backdrop-blur-sm
+    p-4
+    rounded-md
+  "
+>
+  <p
+    className="
+      text-white
+      text-base
+      leading-relaxed
+      font-medium
+      drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]
+    "
+  >
+    {service.description}
+  </p>
+
+  <ul className="space-y-2 pt-2">
+    {service.features.map((feature, i) => (
+      <li
+        key={i}
+        className="
+          text-[#F5F5F5]
+          text-sm
+          flex
+          items-center
+          gap-3
+          font-normal
+          drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]
+        "
+      >
+        <span className="w-1.5 h-1.5 bg-[#C9A24D] flex-shrink-0" />
+        {feature}
+      </li>
+    ))}
+  </ul>
+</motion.div>
+
 
                 {/* Divider */}
                 <motion.div

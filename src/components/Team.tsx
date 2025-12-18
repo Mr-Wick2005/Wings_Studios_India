@@ -51,14 +51,14 @@ export function Team({ founder, members }: TeamProps) {
         {/* ===================== */}
         {/* FOUNDER SECTION */}
         {/* ===================== */}
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-32">
+        <div className="grid lg:grid-cols-2 gap-12 items-start mb-32">
           {/* Left: Text */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 100 } : {}}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="text-[#C9A24D] text-2xl tracking-[0.3em] uppercase block mb-4">
+            <span className="text-[#C9A24D] text-xl tracking-[0.3em] uppercase block mb-4">
               Founder
             </span>
 
@@ -107,9 +107,6 @@ export function Team({ founder, members }: TeamProps) {
             </div>
           </motion.div>
         </div>
-        <br />
-        <br />
-        <br />
 
         {/* ===================== */}
         {/* TEAM HEADER */}
@@ -120,7 +117,7 @@ export function Team({ founder, members }: TeamProps) {
           transition={{ duration: 1 }}
           className="text-center mb-20"
         >
-          <span className="text-[#C9A24D] text-sm tracking-[0.3em] uppercase mb-4 block">
+          <span className="text-[#C9A24D] text-xl tracking-[0.3em] uppercase mb-4 block">
             Our Team
           </span>
           <h2 className="text-4xl lg:text-6xl font-['Playfair_Display'] text-white">

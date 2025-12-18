@@ -49,7 +49,7 @@ export function Contact() {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
-          <span className="text-[#C9A24D] text-sm tracking-[0.3em] uppercase mb-4 block">Get In Touch</span>
+          <span className="text-[#C9A24D] text-xl tracking-[0.3em] uppercase mb-4 block">Get In Touch</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-['Playfair_Display'] text-white">
             Let's Create Together
           </h2>

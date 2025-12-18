@@ -27,13 +27,13 @@ export const cardTiltFadeUp = (delay = 0, duration = 1.2) => {
   return {
     hidden: {
       opacity: 0,
-      y: 40,
+      y: 45,
       scale: 0.92,
       rotateX: 10,
     },
     show: {
       opacity: 1,
-      y: -55,
+      y: 95,
       scale: 0.7,
       rotateX: 0,
       transition: {

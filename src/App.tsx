@@ -117,7 +117,7 @@ export default function App() {
   };
 
   const teamMembers = [
-    { name: "Hari Nagendrababu ", role: "VFX artics & editor", image: "/assets/hari.jpg" },
+    { name: "Hari Nagendrababu ", role: "VFX artist & editor", image: "/assets/hari.jpg" },
     {
       name: "Vaishali P jadhav ",
       role: "Business development Executive",
@@ -125,7 +125,7 @@ export default function App() {
     },
     {
       name: "Shiva ",
-      role: "editor",
+      role: "VFX artist & editor",
       image: "/assets/shiva.jpg",
     },
     // { name: "Anand Roy", role: "VFX Supervisor", image: "/assets/anand.jpg" },
@@ -134,8 +134,9 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#0B0B0B] overflow-x-hidden">
       <Navbar />
-      <Hero backgroundVideo="/assets/background_video.mp4" />
-      <About image="/assets/whoweare-section.png"/>
+      <Hero backgroundVideo="/assets/background_video.mp4" /> 
+      {/* backgroundVideo="/assets/background_video.mp4" */}
+      <About image="/assets/logowings.jpg"/>
       <Pillars />
       <Services services={services} />
       <AIFeature image="https://images.unsplash.com/photo-1761223976379-04c361d3068a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBSSUyMHRlY2hub2xvZ3klMjB2aXN1YWxpemF0aW9ufGVufDF8fHx8MTc2NTY0ODE4N3ww&ixlib=rb-4.1.0&q=80&w=1080" />

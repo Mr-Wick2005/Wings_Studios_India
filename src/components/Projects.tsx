@@ -70,7 +70,7 @@ export function Projects({ projects }: ProjectsProps) {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-16"
         >
-          <span className="text-[#C9A24D] text-sm tracking-[0.3em] uppercase mb-4 block">
+          <span className="text-[#C9A24D] text-xl tracking-[0.3em] uppercase mb-4 block">
             Our Work
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-['Playfair_Display'] text-white">

@@ -62,15 +62,22 @@ export function Hero({ backgroundVideo }: HeroProps) {
           transition={{ duration: 1.2, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="mb-8"
         >
-          <img src="/assets/logowings.jpg" alt="Wings Studios Logo" className="w-20 h-20 lg:w-24 lg:h-24 object-contain mx-auto mb-6" loading="lazy" />
+          {/* <img src="/assets/logowings.jpg" alt="Wings Studios Logo" className="w-20 h-20 lg:w-24 lg:h-24 object-contain mx-auto mb-6" loading="lazy" /> */}
         </motion.div>
 
         {/* Main Headline with Looping SplitText Animation */}
-        <LoopingSplitText
-          text="WINGS STUDIOS INDIA"
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-['Playfair_Display'] text-white mb-6 tracking-tight max-w-5xl"
-          repeatDelay={5}
-        />
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-0 sm:gap-4 mb-6">
+          <LoopingSplitText
+            text="WINGS STUDIOS"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-['Playfair_Display'] text-white tracking-tight max-w-5xl text-center"
+            repeatDelay={5}
+          />
+          <LoopingSplitText
+            text="INDIA"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-['Playfair_Display'] text-white tracking-tight max-w-5xl text-center"
+            repeatDelay={5}
+          />
+        </div>
 
         {/* Divider Line */}
         <motion.div
